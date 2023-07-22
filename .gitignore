@@ -1,0 +1,5 @@
+resources/*.tar.gz
+resources/*.tgz
+.DS_store
+resources/.DS_store
+data
