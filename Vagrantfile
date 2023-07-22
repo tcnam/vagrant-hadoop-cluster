@@ -2,6 +2,10 @@ Vagrant.require_version ">= 1.4.3"
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+	# config proxy, require vagrant-proxyconf plugin "vagrant plugin install vagrant-proxyconf" , can comment if not needed
+	config.proxy.http     = ENV["http_proxy_vagrant"]
+	config.proxy.https    = ENV["https_proxy_vagrant"]
+	config.proxy.no_proxy = ENV["no_proxy"]
 	numNodes = 5
 	r = numNodes..1
 	(r.first).downto(r.last).each do |i|
