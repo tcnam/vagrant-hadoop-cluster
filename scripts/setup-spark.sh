@@ -15,8 +15,8 @@ function installRemoteSpark {
 
 function setupSpark {
 	echo "setup spark"
-	mkdir /usr/local/spark
-	mkdir /usr/local/spark/conf
+	mkdir -p /usr/local/spark
+	mkdir -p /usr/local/spark/conf
 	cp -f /vagrant/resources/spark/slaves /usr/local/spark/conf
 	cp -f /vagrant/resources/spark/spark-env.sh /usr/local/spark/conf
 	cp -f /vagrant/resources/spark/hive-site.xml /usr/local/spark/conf

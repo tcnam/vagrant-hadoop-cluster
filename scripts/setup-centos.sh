@@ -1,4 +1,5 @@
 #!/bin/bash
+tr -d '\r' < "/vagrant/scripts/commontemp.sh" > "/vagrant/scripts/common.sh"
 source "/vagrant/scripts/common.sh"
 
 function disableFirewall {

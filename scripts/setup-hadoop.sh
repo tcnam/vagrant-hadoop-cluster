@@ -15,14 +15,14 @@ function installRemoteHadoop {
 
 function setupHadoop {
 	echo "creating hadoop directories"
-	mkdir /var/hadoop
-	mkdir /var/hadoop/hadoop-datanode
-	mkdir /var/hadoop/hadoop-namenode
-	mkdir /var/hadoop/mr-history
-	mkdir /var/hadoop/mr-history/done
-	mkdir /var/hadoop/mr-history/tmp
-	mkdir /var/hive/
-	mkdir /var/hive/iotemp
+	mkdir -p /var/hadoop
+	mkdir -p /var/hadoop/hadoop-datanode
+	mkdir -p /var/hadoop/hadoop-namenode
+	mkdir -p /var/hadoop/mr-history
+	mkdir -p /var/hadoop/mr-history/done
+	mkdir -p /var/hadoop/mr-history/tmp
+	mkdir -p /var/hive/
+	mkdir -p /var/hive/iotemp
 	#Security valunerable
 	chmod -R 777 /var/hive/iotemp
 	#Hive shell throws out error. Renaming following .jar resolves the issue

@@ -15,7 +15,7 @@ function installRemotePig {
 
 function setupPig {
 	echo "setup Pig"
-	mkdir
+	mkdir -p /usr/local/pig/conf
 	cp -f /vagrant/resources/pig/slaves /usr/local/pig/conf
 	cp -f /vagrant/resources/pig/pig-env.sh /usr/local/pig/conf
 }
